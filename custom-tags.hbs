@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{#post}}
+<main id="site-main" class="site-main outer sdk-tags-container" role="main">
+  <div class="inner sdk-tags-content">
+    <header class="post-full-header">
+      <h1 class="post-full-title">{{title}}</h1>
+    </header>
+    {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+    <div class="tags sdk-tags-list">
+        {{#foreach tags}}
+            <a href="{{ url }}" class="sdk-tag-item">
+              {{#if feature_image}}
+                <img src="{{feature_image}}">
+              {{/if}}
+              <span class="tag-title sdk-tag-title">{{ name }}</span>
+              <p class="tag-title sdk-tag-description">{{ description }}</p>
+              <small class="sdk-tag-stories">{{ count.posts }} Artigos</small>
+            </a>
+        {{/foreach}}
+    </div>
+    {{/get}}
+  </div>
+</main>
+{{/post}}

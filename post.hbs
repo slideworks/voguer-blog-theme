@@ -14,4 +14,14 @@
         {{> "comments"}}
     {{/post}}
 
+    {{#post}}
+        <div class="sdk-tags-post">
+            {{#foreach tags}}
+                <a href="{{ url }}" class="sdk-tag-button">
+                    <span class="tag-title">{{ name }}</span>
+                </a>
+            {{/foreach}}
+        </div>
+    {{/post}}
+
 </main>

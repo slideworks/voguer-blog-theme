@@ -1,0 +1,56 @@
+.sdk-tags-container {
+    width: 100%;
+    padding: 64px 32px;
+}
+
+@media (min-width: 768px) {
+    .sdk-tags-list {
+        display: grid;
+        gap: 16px;
+        margin-top: 32px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sdk-tags-list {
+        display: grid;
+        gap: 16px;
+        margin-top: 32px;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.sdk-tag-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.sdk-tag-description {
+    font-size: 14px;
+}
+
+.sdk-tag-stories {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sdk-tag-description {
+    font-size: 16px;
+}
+
+.sdk-tag-item > img {
+    flex-shrink: 0;
+    margin-bottom: 24px;
+    width: 100%;
+    max-height: 244px;
+    object-fit: cover;
+}
+
+.sdk-tag-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%
+}

@@ -9,6 +9,32 @@
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
+    <style>
+        .share-block {
+            margin: 16px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .share-block span {
+            display: inline-block;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 2rem;
+        }
+        .share-block a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+            margin: 0 0.25rem;
+        }
+        .share-block a:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 
 <body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{^is "home"}}{{#if @site.cover_image}} is-head-brand{{/if}}{{/is}}">
@@ -74,18 +100,35 @@
         {{{body}}}
     </div>
 
-    <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer">
-        <div class="gh-foot-inner gh-inner">
+    <footer class="sdk-voguer-footer">
+        <hr  class="sdk-footer-line">
+        <div class="sdk-voguer-footer-content">
+            <div class="sdk-voguer-footer-title">
+                {{> "icons/logo-voguer"}}
+                <p>Somos a Voguer, o seu novo Yacht Club e o maior portal de experiências marítimas do Brasil. Encontre em nossa plataforma de aluguel o barco ideal para qualquer ocasião ou ofereça seu iate para locação.</p>
+            </div>
+            <div class="sdk-voguer-footer-about">
+                <p>A Voguer</p>
+                <a href="https://www.voguer.com.br/" target="_blank">Sobre nós</a>
+            </div>
+            <div class="sdk-voguer-footer-contact">
+                <p>Contato</p>
+                <div class="sdk-contact-icons">
+                    <a href="https://www.instagram.com/usevoguer">
+                        {{> "icons/instagram"}}
+                    </a>
+                    <a href="https://www.tiktok.com/@usevoguer">
+                        {{> "icons/tiktok"}}
+                    </a>
+                    <a href="https://www.linkedin.com/company/usevoguer">
+                        {{> "icons/linkedin"}}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sdk-footer-copyright">
             <div class="gh-copyright">
                 {{@site.title}} © {{date format="YYYY"}}
-            </div>
-            {{#if @site.secondary_navigation}}
-                <nav class="gh-foot-menu">
-                    {{navigation type="secondary"}}
-                </nav>
-            {{/if}}
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
         </div>
     </footer>

@@ -6,12 +6,14 @@
 @import "general/icons.css";
 @import "site/layout.css";
 @import "site/header.css";
+@import "site/footer.css";
 @import "site/cover.css";
 @import "blog/feed.css";
 @import "blog/featured.css";
 @import "blog/pagination.css";
 @import "blog/single.css";
 @import "blog/author.css";
+@import "blog/tags.css";
 @import "blog/share.css";
 @import "blog/navigation.css";
 @import "blog/related.css";

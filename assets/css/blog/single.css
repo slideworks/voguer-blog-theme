@@ -128,3 +128,19 @@
         margin-top: 3rem;
     }
 }
+
+.sdk-tags-post {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1216px;
+    margin: 32px auto 0;
+    padding: 0 32px;
+    gap: 8px;
+}
+
+.sdk-tag-button {
+    border: 1px solid #17174A;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-weight: bold;
+}
